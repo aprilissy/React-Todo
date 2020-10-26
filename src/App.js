@@ -52,11 +52,13 @@ class App extends React.Component {
     
     return (
       <div>
-        <TodoForm handleAddTask={this.handleAddTask}/>
+        <TodoForm 
+          handleAddTask={this.handleAddTask} 
+          handleClearTask={this.handleClearTask}
+          />
         <TodoList 
           todoList={this.state.todoList}
           handleToggleTask={this.handleToggleTask}
-          handleClearTask={this.handleClearTask}
         />
       </div>
     );

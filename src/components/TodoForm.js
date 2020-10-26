@@ -14,6 +14,11 @@ class TodoForm extends React.Component {
     })
   }
 
+  // handleClick = () => {
+  //   this.props.handleClearTask()
+  // }
+
+
   handleSubmit = e => {
     e.preventDefault()
     this.props.handleAddTask(this.state.input)
@@ -21,15 +26,24 @@ class TodoForm extends React.Component {
 
   render() {    
     return(
-      <form onSubmit={this.handleSubmit}>
-        <input
-        name='todo'
-        value={this.state.input}
-        type='text'
-        onChange={this.handleChanges}
-        />
-        <button>Add</button>
-      </form>
+
+     <div>
+        <form onSubmit={this.handleSubmit}>
+          <input
+          name='todo'
+          value={this.state.input}
+          type='text'
+          onChange={this.handleChanges}
+          />
+          <button>Add Todo</button>
+        </form>
+        <span>
+            <button 
+              onClick={this.props.handleClearTask} className='clear-btn'>
+            Clear Completed
+          </button>
+        </span>
+     </div>
     )
   }
 }
