@@ -1,3 +1,68 @@
-.todo.completed{
-  text-decoration: :line-through;
+.todo.completed {
+  text-decoration: line-through;
+}
+
+body {
+  background-color: #e0afa0;
+}
+.appContainer {
+  background-color: #bcb8b1;
+  margin: 3%;
+}
+
+.fromContainer {
+  margin: 3% 10% 0;
+  padding: 3%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  width: 50%;
+  padding: 2%;
+  margin: 1%;
+  border: none;
+  background-color: #8a817c;
+  color: #463f3a;
+  font-size: 1rem;
+  align-items: center;
+}
+
+.input {
+  border: none;
+  padding: 0.75%;
+  margin: 1%;
+  background-color: #8a817c;
+  color: #463f3a;
+}
+
+.input:focus {
+  background-color: #8a817c;
+  color: #463f3a;
+}
+
+.todoList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3%;
+}
+
+p {
+  margin: 0.5%;
+}
+
+.todo {
+  color: gold;
+}
+
+.todo.completed {
+  color: red;
+  text-decoration: line-through;
 }

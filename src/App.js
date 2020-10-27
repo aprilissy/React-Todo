@@ -1,6 +1,7 @@
 import React from 'react';
 import TodoList from './components/TodoList'
 import TodoForm from './components/TodoForm'
+import './components/Todo.css'
 
 const todoList = [];
 
@@ -51,15 +52,15 @@ class App extends React.Component {
     console.log('render',this.state);
     
     return (
-      <div>
-        <TodoForm 
-          handleAddTask={this.handleAddTask} 
-          handleClearTask={this.handleClearTask}
+      <div className='appContainer'>
+          <TodoForm 
+            handleAddTask={this.handleAddTask} 
+            handleClearTask={this.handleClearTask}
+            />
+          <TodoList 
+            todoList={this.state.todoList}
+            handleToggleTask={this.handleToggleTask}
           />
-        <TodoList 
-          todoList={this.state.todoList}
-          handleToggleTask={this.handleToggleTask}
-        />
       </div>
     );
   }
